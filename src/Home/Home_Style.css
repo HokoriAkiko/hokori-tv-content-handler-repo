@@ -1,0 +1,64 @@
+.home{
+    .left{flex:1;}
+    .mid{width:60vw;padding:10px;}
+    .right{flex:1;}
+
+    .card{
+        border:1px solid transparent;border-radius: 20px;
+        justify-content: center;align-items:center;
+        background-color: rgba(150,150,150,0.15);
+        cursor: pointer; margin:5px;
+        .message{color: gray;margin: 0px 10px;}
+        .count{font-size: 100px;}
+    }
+    .card:hover{
+        border:1px solid gray;
+        box-shadow: 3px 3px 3px gray;
+    }
+
+    .series_count{
+        .message{color:blue;}
+        .count{font-size: 75px;color:blue;}
+    }
+    .series_count:hover{
+        cursor: default;
+        border: 1px solid transparent;
+        box-shadow: 3px 3px 3px transparent;;
+    }
+
+    .trash{height:300px;width:300px;}
+    .lack{
+        height:150px;
+        .message{color: gray;}
+        .count{font-size: 75px;}
+    }
+
+    .server_health{
+        background-color: rgba(150,150,150,0.15);border-radius: 20px;margin:5px;
+        label{padding:10px;margin:10px;color: gray;}
+        .circular_gauge{svg{width:200px;height:200px;}}
+        .gauge_card{background-color: rgba(200,200,200,0.5);border-radius: 20px;margin: 10px;}
+
+        .pairs{
+            background-color: rgba(200,200,200,0.5);border-radius: 20px;margin: 10px;padding:5px;
+            .each{
+                align-items: center;
+                label{padding: 0px;margin:0px;flex:1;min-width: 115;}
+                div{color: orangered;flex:1;}
+            }
+
+        }
+    }
+
+}
+
+@media(width < 1000px){
+    .home{
+        .left{flex:0;}
+        .mid{
+            width: 100%;
+            .trash{flex:1;}
+        }
+        .right{flex:0;}
+    }
+}

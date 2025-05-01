@@ -1,0 +1,81 @@
+.manage_genres{
+    .row_box{display: flex; flex-direction: row;}
+    .column_box{display: flex; flex-direction: column;}
+    .wrap_box{display: flex;flex-wrap: wrap;}
+    .grid_box{display: grid;}
+
+    label{
+        padding: 10px;
+        font-size: 18px;
+        color: white; background-color: rgba(0, 100, 200,1);
+    }
+
+    .left{flex: 1;}
+    .mid{
+        width: 60vw;
+        background-color: rgba(225,225,225,0.225);
+        margin-top: 10px; padding: 10px;        
+    }
+    .right{flex: 1;}
+
+    .add_genre{
+        align-items: center;
+        input{
+            color: gray;
+            margin: 10px 10px 10px 0px; padding: 10px;
+            width: 200px;
+            outline: 0px;
+        }
+        input:focus{
+            color: blue;
+            border: 1px solid blue;
+        }
+
+        button{
+            padding: 10px;
+            color: white;
+            background-color: blue;
+            border: 1px solid blue;
+        }
+        button:hover{
+            border: 1px solid rgba(0, 100, 200,1);
+            background-color: rgba(0, 100, 200,1);
+        }
+    }
+
+    .section{
+        .container{
+            margin: 10px 0px;
+            grid-template-columns: auto auto auto auto auto; 
+            gap: 10px;
+            button{
+                padding: 5px;
+                border: 1px solid rgba(0, 100, 200,1);
+                background-color: white;
+                color: rgba(0, 100, 200,1);
+            }
+            button:hover{
+                color: white;
+                background-color: rgba(0, 100, 200,1);
+            }
+        }
+    }
+
+    .update{
+        border: 1px solid green;
+        background-color: white; color: green;
+        padding: 10px;
+    }
+    .update:hover{
+        background-color: green; color: white;
+    }
+}
+
+@media(width < 1000px){
+    .manage_genres{
+        .mid{
+            width: 100%;
+            margin: 10px;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.modal_box{
+    background-color: rgba(200,200,200,0.5);
+    z-index: 100000;
+    position: absolute;
+    pointer-events: all;
+
+    .small{
+        width: 90%;
+        word-wrap: break-word;
+        white-space: normal;
+        color: white;
+        border: 2px solid white;
+        display: flex; justify-content: center;align-items: center;
+        background-color: red;
+    }
+}

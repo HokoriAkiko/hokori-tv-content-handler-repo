@@ -1,0 +1,76 @@
+.header{
+    border-bottom: 2px solid lightblue; border-top: 2px solid lightblue;
+    padding: 10px;
+    background-color: white;
+
+    .left{ flex: 1; }
+    .mid{
+        align-items: center;
+        width: 60vw; height: inherit;
+
+        img{ width: 200px; height: inherit;}
+        
+        button{
+            margin: 0px 10px;
+            width: 150px; height: 80%;
+            background-color: transparent;
+            border: transparent;
+            font-size: 17px;
+        }
+        button:hover{border: 1px solid blue; color: blue;}
+        .active{ background-color: blue;color:white }
+        .active:hover{color: white;}
+    }
+    .right{
+        flex: 1; 
+        color: blue;
+        font-size: 17px;
+        letter-spacing: 1px;
+        height: inherit;
+        align-items: center;
+        .menu{
+            display: none;
+            cursor: pointer;
+            width: 100px;height: 100%;
+            background-image: url("../../public/menuicon.png"); background-size: contain; background-repeat: no-repeat; background-position: center;
+        }
+        .menu:hover{
+            filter: invert(67%) sepia(69%) saturate(7028%) hue-rotate(153deg) brightness(100%) contrast(102%);
+        }
+    }
+
+    .expand{
+        display: none;
+        background-color: rgba(225,225,225,0.255);
+        align-items: center;
+        button{
+            margin: 10px;
+            width: 90%; height: 80%;
+            background-color: transparent;
+            border: transparent;
+            font-size: 17px;
+            border: 1px solid transparent;
+        }
+        button:hover{border: 1px solid blue; color: blue;}
+        .active{ background-color: blue;color:white }
+        .active:hover{color: white;}
+    }
+}
+
+@media(width < 1000px){
+    .header{
+        .mid{
+            width: 100%;
+            button{display: none;}
+        }
+        .right{
+            color: transparent;
+            .menu{display: flex;}
+        }
+
+        .expand{
+            display: flex; 
+            button{display: block;}
+        }
+    }
+}
